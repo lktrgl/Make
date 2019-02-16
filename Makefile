@@ -3,14 +3,14 @@
 .PHONY: all
 
 all: main.o foo.o
-	gcc -lstdc++ main.o foo.o
+	g++ main.o foo.o
 
 clean:
-	rm -vf main.o foo.o a.out
+	rm -vf main.o foo.o a.exe
 
 main.o: main.cpp foo.h
-	gcc -c main.cpp
+	g++ -c main.cpp
 
 foo.o: foo.cpp foo.h
-	gcc -c foo.cpp
+	g++ -c foo.cpp
 
